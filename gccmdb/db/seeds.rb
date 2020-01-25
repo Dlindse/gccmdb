@@ -72,7 +72,65 @@ require 'csv'
 ##
 ## ## seed Measures Table
 ##
+#@start_count = Measure.all.count
+measure_payload = []
+measure_csv = CSV.read('lib/truth_csvs/Measure_ids.csv', headers: true)
+measure_csv.each{|row|
+  measure_payload << row.to_h.map{|k,v| [k.to_sym, v] }.to_h
+}
 
+#sorted_measure_payload = measure_payload.sort_by{|hsh| hsh[:name] }
+
+
+measure_payload.each{|hsh|
+  hsh.each{|k,v|
+    
+    # replace country string with country id
+    if k == :country_id
+      @country = Country.where(country: v)[0]
+      unless @country == nil
+        hsh[k] = @country.id
+      end
+    end
+
+    # replace data source string with country id
+    if k == :data_source_id
+      @source = DataSource.where(source: v)[0]
+      unless @source == nil
+        hsh[k] = @source.id
+      end
+    end
+
+    # replace measure targets string with array of measure target ##ids##
+    if k == :measure_targets
+      if v == nil
+        hsh[k] = []
+      else
+        measure_strings = v.split(", ")
+        targets = []
+        measure_strings.each{|string|
+          @target = MeasureTarget.where(target: string)[0]
+          puts string
+          targets << @target.id
+        }
+        hsh[k] = targets  
+      end  
+      
+    end
+  }
+  p hsh
+  # hsh.update(hsh){|k,v| 
+  #   if k == :country_id
+  #     v = Country.where(country: v)[0].id
+  #   else
+  #   end
+  #   puts hsh
+  # }
+  puts ""
+}
+
+# Measure.create(sorted_measure_payload)
+# puts "#{MeasureTarget.all.count - @start_count} MeasureTarget records created"
 
 
 
