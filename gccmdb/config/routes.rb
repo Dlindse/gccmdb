@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :measure_targets
+  resources :data_sources
+  resources :countries
   get 'scratch/back'
   get 'scratch/homepage'
   get 'scratch/one'

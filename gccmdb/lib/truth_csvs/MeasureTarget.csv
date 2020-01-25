@@ -1,4 +1,4 @@
-measure_target,truth_uuid
+target,truth_uuid
 solar thermal electricity (ste),79ffa19e-a31d-4b9e-a149-11734c1bba5a
 resilience,b578a379-b18e-4067-ae08-a38c0a92cc8a
 freight,6de06325-502e-4e09-8180-b01676376cba
@@ -17,7 +17,6 @@ geothermal,227be2df-d173-4d92-ba99-b79314c3e93a
 paper and board,2d297abd-b355-4fa8-bb3a-3b7ca3dc5a15
 land use change and forestry,4197b83d-546e-4bdd-87fd-2731f3a3d60f
 nuclear,cc2a4b69-e131-476c-98f5-6f610d67d9ce
-resilience,df3a0dbe-2fd5-4c32-83e3-8977bddc774c
 pumps,6183c0c3-e097-4baa-be86-daa75d16b0df
 commercial,82f15a37-9745-4435-8cec-1cedb46d99c5
 vehicle operation,3df42c59-7f68-4ad3-a3a4-ab1b9041c651

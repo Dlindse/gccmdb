@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Sources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Truth uuid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_sources.each do |data_source| %>
+      <tr>
+        <td><%= data_source.source %></td>
+        <td><%= data_source.truth_uuid %></td>
+        <td><%= link_to 'Show', data_source %></td>
+        <td><%= link_to 'Edit', edit_data_source_path(data_source) %></td>
+        <td><%= link_to 'Destroy', data_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data Source', new_data_source_path %>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gccmdb</title>
+    <title>GCCMDB</title>
+    <%= favicon_link_tag asset_path('gccmdb_icon.png') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +10,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>    
+    <div class="body-container">
+      <%= yield %>
+    </div>    
   </body>
 </html>
