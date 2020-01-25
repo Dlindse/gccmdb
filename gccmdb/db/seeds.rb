@@ -72,7 +72,7 @@ require 'csv'
 ##
 ## ## seed Measures Table
 ##
-#@start_count = Measure.all.count
+@start_count = Measure.all.count
 measure_payload = []
 measure_csv = CSV.read('lib/truth_csvs/Measure_ids.csv', headers: true)
 measure_csv.each{|row|
@@ -109,28 +109,29 @@ measure_payload.each{|hsh|
         measure_strings = v.split(", ")
         targets = []
         measure_strings.each{|string|
-          @target = MeasureTarget.where(target: string)[0]
-          puts string
-          targets << @target.id
+          if string.include?("/")
+            string.split("/").each{|s|
+
+              @target = MeasureTarget.where(target: s.strip)[0] #.gsub(" ","")
+                # puts s
+                targets << @target.id
+              }
+          else
+            @target = MeasureTarget.where(target: string.strip)[0]
+              # puts string
+              targets << @target.id
+          end
+          hsh[k] = targets
         }
-        hsh[k] = targets  
-      end  
-      
+      end
     end
   }
-  p hsh
-  # hsh.update(hsh){|k,v| 
-  #   if k == :country_id
-  #     v = Country.where(country: v)[0].id
-  #   else
-  #   end
-  #   puts hsh
-  # }
-  puts ""
+  # p hsh
+  # puts ""
 }
 
-# Measure.create(sorted_measure_payload)
-# puts "#{MeasureTarget.all.count - @start_count} MeasureTarget records created"
+Measure.create(measure_payload)
+puts "#{Measure.all.count - @start_count} Measure records created"
 
 
 

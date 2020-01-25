@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :measures
   resources :measure_targets
   resources :data_sources
   resources :countries
