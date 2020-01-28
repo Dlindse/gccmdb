@@ -44,9 +44,9 @@
       <tr>
         <td><%= measure.agency %></td>
         <td><%= measure.city %></td>
-        <td><%= measure.country_id %></td>
+        <td><%= Country.where(id: measure.country_id)[0].country %></td>
         <td><%= measure.country_region %></td>
-        <td><%= measure.data_source_id %></td>
+        <td><%= DataSource.where(id: measure.data_source_id)[0].source %></td>
         <td><%= measure.description %></td>
         <td><%= measure.ghgs_affected %></td>
         <td><%= measure.impact_evaluation %></td>
@@ -60,7 +60,7 @@
         <td><%= measure.measure_implementation_period_start_year %></td>
         <td><%= measure.measure_implementation_period_end_year %></td>
         <td><%= measure.measure_status %></td>
-        <td><%= measure.measure_targets %></td>
+        <td><%= measure.measure_targets.map{|target_id| MeasureTarget.where(id: target_id)[0].target } %></td>
         <td><%= measure.measure_type %></td>
         <td><%= measure.measure_written_year %></td>
         <td><%= measure.related_documents_text %></td>
