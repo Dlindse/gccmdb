@@ -1,0 +1,27 @@
+<%= form_with(model: measure_target, local: true) do |form| %>
+  <% if measure_target.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(measure_target.errors.count, "error") %> prohibited this measure_target from being saved:</h2>
+
+      <ul>
+        <% measure_target.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :target %>
+    <%= form.text_field :target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :truth_uuid %>
+    <%= form.text_field :truth_uuid %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

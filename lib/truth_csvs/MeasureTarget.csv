@@ -1,0 +1,186 @@
+target,truth_uuid
+solar thermal electricity (ste),79ffa19e-a31d-4b9e-a149-11734c1bba5a
+resilience,b578a379-b18e-4067-ae08-a38c0a92cc8a
+freight,6de06325-502e-4e09-8180-b01676376cba
+lighting,f45e43d7-628f-425a-9051-2838187d29eb
+engineering and metal industries,367c76db-602e-4ab4-94ff-b686239f1ae4
+transport means,db2e35f0-377b-4594-a649-2d3e01fa8f8a
+compressors,49afda82-e094-47aa-95d1-449534037d3e
+buildings,4392e8de-f2ba-49e3-81e6-e476901241aa
+small and medium sized enterprises (smes),321a8c73-58d8-4933-95b1-366b703d4c91
+power,f257805f-c5c9-40a6-a4a1-d1b494b88306
+energy consumption,831b194c-a856-43ab-b130-bef63589c984
+industrial processes,4b5b866c-ff75-4553-81d3-14d8ff790cd4
+industrial subsectors,a6bf1131-3f11-4ace-8788-ecbb4aff16e9
+oil),2584202b-a6c3-4747-ad59-f4a5908430f1
+geothermal,227be2df-d173-4d92-ba99-b79314c3e93a
+paper and board,2d297abd-b355-4fa8-bb3a-3b7ca3dc5a15
+land use change and forestry,4197b83d-546e-4bdd-87fd-2731f3a3d60f
+nuclear,cc2a4b69-e131-476c-98f5-6f610d67d9ce
+pumps,6183c0c3-e097-4baa-be86-daa75d16b0df
+commercial,82f15a37-9745-4435-8cec-1cedb46d99c5
+vehicle operation,3df42c59-7f68-4ad3-a3a4-ab1b9041c651
+hybrid vehicles,9c3932e8-9682-4805-97f1-bd3603c65520
+commercial services,a5ff54d9-8cdf-4dee-a128-019fe2cee110
+non-road,db13b985-4b89-485b-9029-af3b1e7ba134
+refrigeration,4c45da5a-215f-44fe-b4c1-879775719538
+energy,9bc88503-2d28-4cad-84d7-040c8cd9e464
+fuel,606605fe-22f0-4901-a535-c7c2bbf8a0ac
+fossil fuels (coal,da91072f-885b-44fa-ae38-50d60964b3bb
+biofuels for transport,9c7db4e7-61f6-44b4-b131-983c6df72380
+tidal,e2e48795-8a22-4ada-b887-551671b0358e
+lead,49a10bbf-b3f1-4dfc-8ac0-563a068f076c
+heating (including district heating),b51b249b-51ba-442b-ad05-2a021b86999b
+other,bc426e0b-75bc-4062-b97b-5e5473703b3d
+infrastructure,ff37a77f-5b37-4e32-a05f-2e4b2c045cb8
+other sectors,5583a829-a3e8-4491-a319-677dc2a4b384
+timber and wood products,5dd7c07d-fdf8-49df-909a-8287e856e85d
+industrial,24a97d85-73c3-4ae1-8f5f-a964fa6acbcc
+net zero energy,58301d8c-8b3e-4aa0-8606-a4484fbd822e
+ventilation,cfe60cc0-d537-403e-8850-e30ac4614a45
+trade-off,85e2dc13-f1b5-455e-ad45-fc66e2da44eb
+demand-side management,4ec1399d-ce28-4c40-9e86-87d813213594
+infrastructure and planning,28a5c781-9f25-4686-82d5-debc1cf41628
+carbon capture storage,d121fad5-97fa-4446-804f-329d94f022d1
+all sectors,c6e2c46b-af79-4a38-a972-563520ea787f
+low energy,76a48830-5b29-4932-a665-ab99c347886c
+demand reduction,7aebc6b5-4ec2-4f1a-9d8c-900bb6a4d55c
+bioethanol,fc0f831c-bc39-4322-86d5-0ca5b268d288
+leather and clothing,69edc759-8bdb-4a18-b9fd-6562ea44a458
+drink and tobacco,59a25f0a-a842-44c2-a37b-c12d545f9fcf
+construction,0f697559-f195-4636-a75f-0c9a56cfe0ae
+zinc and lead,9342cad6-fece-40cf-b390-586b2dcc70f9
+standby,4e4a56fa-76a9-4aa9-968b-a7f538c56f31
+new buildings,6335344b-8722-4909-b581-f6b992d92e98
+tertiary,712c69af-5866-4d15-a1a6-cb3e5a2ca97f
+hydropower,b338a7b0-3ccb-4b06-80ad-d641cd329660
+biomass for heat,46d2ef34-ec5d-4961-81db-2a89d0f7e646
+home entertainment,0bf8b14e-65c8-4bcb-85da-bf055d8b7649
+water,e171bebc-eb3c-4abc-905e-538022bcc87e
+chp,34d65a20-0fcb-45e0-b4e4-2d0194ef3584
+liquefied petroleum gas,e963b6ea-ed6d-4577-a910-3a3e6baa9d55
+energy sector,996c46e7-35c7-46a1-b1ab-bf3557b96caf
+industrial products,b444add0-67f3-4cd7-97f8-ddcadf90bfcc
+heavy-duty vehicles,81e5e275-7e5a-41e0-9e2c-d2b7c83b45ca
+heat,51e974a0-c5a6-48dd-8ea3-fb7172ca679a
+biodiesel,de7e2222-c6ff-44a1-a3a2-6a0dbb1e26ab
+non-residential,5141f951-cacc-4594-b4dc-ce44ddfca01d
+distribution transformers,39163641-f7fa-4de2-9cbc-27ca0f5100fd
+scope,7bbd424f-50a1-4f4f-b910-246cfafef60e
+storage,a9ebc284-890c-4461-a40c-e2d2c08cfe6f
+compressed natural gas,53a45ef9-6902-4ff0-83f1-c10d5256a192
+space cooling,9a2e1eeb-525d-438b-a881-d6dbfbe85e3c
+mining,9737e6dd-74b7-406f-8d5c-2ec2e73f6d33
+corporate fleet average,19101084-dadb-4226-b445-f876e7442964
+model,4aa598cc-2602-4682-a72b-f830fad9e578
+energy performance,e96cf73e-97e9-4b8d-9abc-408c4a4a4b9f
+eco-driving,39479190-d59a-4a8d-8ae3-a233aa0c5ca6
+waste management,114fe7f4-5f71-48e5-bc44-a77f1fbaa8a9
+technology focus,7850e4ee-a472-4ad8-bf43-9406a4e26360
+non ferrous metal,ec0f5e23-7e11-4b44-aacf-068be77de903
+metal articles,96cb3b94-29ef-496e-a335-c4302812a14e
+energy supply,5891f533-e128-4b69-8111-5f91a502d0f6
+solar heat,4aff438c-ef57-4778-912f-549482197ab8
+prescriptive,1adc218f-e308-47fa-8e27-a16c5dd0703f
+cement,bd419556-64bb-46de-aa68-9d660a1d5e79
+road,fda1cc6b-4721-4ab0-aaec-e27e1bad3721
+electricity,ef26852e-58d9-45ca-9ce8-756e99f519a0
+bioenergy,fcd4ee09-de42-4414-bcc8-f85e43abb6f2
+non metallic minerals,025a050a-7070-4c15-ada2-756f50df140a
+wave,7e4d4c45-920c-455a-be99-a64729fd9c79
+mechanical engineering,a406d766-439f-4056-8582-19c15437e417
+renewable,8ef2be5b-b584-493c-9024-92113285ee65
+energy frame,0bafaa7b-63e9-4425-a427-b35df215d281
+building code,710ad714-9ad6-4f59-bf07-097df30d8d4f
+all,8ba95231-7a60-4793-a98d-3c794413b16c
+passenger vehicles,7dd7237e-3d3f-4906-bcf5-140f43c9a46a
+boilers,0680b981-2b53-444d-b429-a4024cd02ffc
+diesel,09169f2e-6662-4e2c-b8b1-5efe65c04dc7
+residential,251bf359-c4f3-4205-88ae-3e07bba3c413
+end-use services,d1274974-717b-4b28-88cb-2d55d8d42dcf
+building materials,a9798898-49a6-41e5-8ceb-497e8d6e66de
+zinc,6a940d31-b2fc-4bb7-a976-7460cdd462a4
+co-firing with fossil fuels,d3e75839-f069-4262-abbe-48fd9506278d
+onshore,5a1e22ad-d5b2-40f0-9602-92d0852e7571
+framework,6f003faa-d729-4f59-bd64-f8313a4daba0
+kitchens & laundry,4cd288f1-0b50-4da7-b442-61449f510dca
+vehicle type,dedce952-1c81-461e-89ad-cacbcec24966
+solar thermal,15b5526d-c00f-4d75-a697-e14a52ee86aa
+electricity generation,d4d22a1b-9d1f-4ab9-85a2-a251ae95d8e1
+industry,7e00709f-cdf1-4972-aa68-4884d2de5063
+wind,9f21e6ec-6900-4ebe-aeb4-5a7f1284f190
+passenger,7dd97516-a613-48ea-b460-fcef64801a52
+ceramics,a7163b3b-5552-4a61-8e8c-4f2be100ce9a
+off-grid,92d8f126-4b77-439f-92bc-48bcd2f391e4
+multi-sectoral policy,ed7cb3f1-6ab5-42aa-81bf-5781541d9710
+solar,d061d81c-079b-4465-8c51-c68450aada64
+iron and steel,70bc6f98-7664-419a-9012-d0276887bf3b
+ground source heat pumps,b59a7c0e-3f99-47ec-8317-c36870ab7fe6
+small- and medium-sized enterprises (smes),7161831a-d14e-4b6b-a76d-679e6181641b
+building type,2a1dd1f6-2ff3-476a-a134-2e180d326308
+individual vehicle,75812336-e6eb-4d36-bb3c-4b35f149906f
+distribution,360b765f-0685-4f7b-ac89-9db6ea43f72c
+cross-industry,102aaf83-dbf0-42ae-b8af-96e751a46e65
+light-duty vehicles,74eb93db-26a3-4e50-918b-8bbd52d1df9e
+gas,5e673316-3572-4bc8-b605-89f776b16bfe
+glass,ecd6cdc9-782f-4681-aebc-d68a7386e2af
+energy efficiency,6c78fbc2-9c67-4b2a-8c2f-f0cc0ec81890
+transport systems,cb60c831-649b-4f15-b102-c7cde953e4ac
+existing buildings,3313bb6e-09b2-4e7f-a3d6-635128e2c11e
+biomass for power,83e6146e-b251-422a-adcb-c60602020d59
+renewable heat pumps,b85b766e-3a2d-42e0-bae5-dcc532287f38
+energy production,651e3726-0344-486d-afb1-c53b69fdf009
+waste,c6c8a01b-d290-4c3d-a439-1f5cd187ee1e
+computers,887813e7-5a2e-409f-8f1e-34fb5837287f
+generation,b480789b-aa5d-4542-89eb-bf83d76233af
+cooling,d53301d4-f264-4c71-92d8-5cc283b26b06
+fuel (conventional and alternative),4fd14382-353f-4432-a51f-26056cb5fee5
+fossil fuel production,0deb763b-d4b2-436d-823a-de98d8b01397
+energy-intensive,6a476db9-2e7a-4a94-a28c-80533adb8b3f
+offshore,82a5d10f-a697-4db4-8cb2-6ae72a396b35
+multiple re sources,7f815b5d-fc5b-4bbd-add1-6a1c1c619737
+reference building,f99986ba-993b-4160-a257-68f16b0130a6
+light manufacturing,0046971f-7b74-4417-8bc6-e3178a781e2a
+chemical,e43c9f44-c2f2-4682-9388-8486dc49d4cc
+ocean,95c19bda-75a6-4ded-af2f-57bd6e16cfbd
+land-use planning,d33b4204-44d2-4fa9-95a2-7802d54ac164
+residential appliances,8c9b45b6-b887-4fbd-9bbc-ae7b20e92e58
+public transport,1f1273a8-9a3f-49a9-816d-a6c3d6a90d97
+cooking & laundry,34c41b49-78f6-4ace-834e-f8516bc1767e
+intelligent transportation (for freight),e509e115-f971-483d-b2ca-c0c699cc40b5
+transport,351d08ef-5818-44cd-9b9f-bb8d5b9e7bf9
+cross-cutting,45e9f48e-27a3-40de-af67-92928f201782
+lamp technologies,08ed66ba-39c8-477d-ad1a-2586b9f4679e
+conventional fuel,a30c9c77-8306-447d-806c-d7fcae25b7f0
+electric vehicles,61a7e0ef-8667-4b18-9581-ce8bf6aed6b0
+aluminium,45d006c2-eed5-47a1-8a5a-528e6d10d033
+motors,56c85b0f-aa9f-4a38-a475-5046b7bde57d
+in-car feedback,4218d00c-cf7c-49a4-953e-c6c2711dbeea
+energy class,119d5efb-3fdb-4277-8a7c-39f618165e17
+copper,2d22d02f-d356-4cdf-bcba-e8b29126c913
+appliances,61c4e6e4-469d-401b-af69-00a3128930e6
+alternative fuel,13014656-d1c6-4c98-bef4-906a510c5127
+water heating,1f80d0af-79db-4df7-b8db-228c35662d89
+biofuel,c92bab6e-b6c8-4547-884e-88c8b51d4ece
+industrial equipment,3ec436c2-3aa5-43c5-8753-c854e480a2d5
+heating,fbee159e-0f76-4567-9fab-d199aa5c12d8
+agriculture,5e90cf63-c307-4f7c-8161-c1fc081cbf4a
+space heating,361f3376-f952-46ad-a9f5-25c1fd89df16
+plug-in hybrid vehicles,8e483aca-589e-4782-a96b-c15aaa1f0a23
+heating ventilation and air conditioning (hvac),23c7a4d1-c65e-4295-a9a5-5f3dbaa0567a
+tyres,f26fc960-6063-4327-8f93-63e87083a1b2
+energy management,1e78abfa-bce7-4533-adc0-e13e8bbc9744
+transmission,9208624a-a530-49e3-89f4-622c6b053996
+solar photovoltaic,a0054d00-15b0-4162-bb40-77ad94e8f69a
+electrical engineering,26188d9a-9e66-4d29-b62e-12a89fd6c2ea
+energy utilities,bdbb7e8a-0d88-44dc-9e93-ad19d52e4a44
+utility,4808d6d0-6470-4378-acc7-5b08219c1b75
+district heating and cooling,92818f35-4d3e-4e37-9b4d-5f0b31a49b70
+modal shift,612d0fd4-6e68-4942-aa4a-add0cb5f7c58
+fittings and controls,c7ce5c6f-8fcf-457e-973c-abe089d06d8c
+land use,71bb8d78-f56a-4518-80e1-0651ca26d6fd
+non-engine components,7bd3e5a4-b042-418a-9982-c1455be1a975
+adaptation,2f09850d-207e-4b58-96b3-6b47beb6ad12
+all-electric vehicles,b373658b-361c-49f7-8df2-492ae36f8b50
+data centers & ict,26a19db4-6c0b-4c0d-b690-4a00455dc342
+fuel efficiency standards,de8b4027-7434-4bc1-9b14-e1be0e5e0f75

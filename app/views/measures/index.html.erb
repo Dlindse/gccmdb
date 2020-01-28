@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Measures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agency</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Country region</th>
+      <th>Data source</th>
+      <th>Description</th>
+      <th>Ghgs affected</th>
+      <th>Impact evaluation</th>
+      <th>Impact on eu ets esd or lulucf emissions</th>
+      <th>Jurisdiction</th>
+      <th>Link</th>
+      <th>Name</th>
+      <th>Percent private funded</th>
+      <th>Measure financing period start</th>
+      <th>Measure financing quantity</th>
+      <th>Measure implementation period start year</th>
+      <th>Measure implementation period end year</th>
+      <th>Measure status</th>
+      <th>Measure targets</th>
+      <th>Measure type</th>
+      <th>Measure written year</th>
+      <th>Related documents text</th>
+      <th>Related documents url</th>
+      <th>Related to eu policy</th>
+      <th>Related to eu policy boolean</th>
+      <th>Related to neeap policy</th>
+      <th>Related to neeap policy boolean</th>
+      <th>Total ghg emissions reductions in 2020</th>
+      <th>Total ghg emissions reductions in 2030</th>
+      <th>Truth uuid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @measures.each do |measure| %>
+      <tr>
+        <td><%= measure.agency %></td>
+        <td><%= measure.city %></td>
+        <td><%= Country.where(id: measure.country_id)[0].country %></td>
+        <td><%= measure.country_region %></td>
+        <td><%= DataSource.where(id: measure.data_source_id)[0].source %></td>
+        <td><%= measure.description %></td>
+        <td><%= measure.ghgs_affected %></td>
+        <td><%= measure.impact_evaluation %></td>
+        <td><%= measure.impact_on_eu_ets_esd_or_lulucf_emissions %></td>
+        <td><%= measure.jurisdiction %></td>
+        <td><%= measure.link %></td>
+        <td><%= measure.name %></td>
+        <td><%= measure.percent_private_funded %></td>
+        <td><%= measure.measure_financing_period_start %></td>
+        <td><%= measure.measure_financing_quantity %></td>
+        <td><%= measure.measure_implementation_period_start_year %></td>
+        <td><%= measure.measure_implementation_period_end_year %></td>
+        <td><%= measure.measure_status %></td>
+        <td><%= measure.measure_targets.map{|target_id| MeasureTarget.where(id: target_id)[0].target } %></td>
+        <td><%= measure.measure_type %></td>
+        <td><%= measure.measure_written_year %></td>
+        <td><%= measure.related_documents_text %></td>
+        <td><%= measure.related_documents_url %></td>
+        <td><%= measure.related_to_eu_policy %></td>
+        <td><%= measure.related_to_eu_policy_boolean %></td>
+        <td><%= measure.related_to_neeap_policy %></td>
+        <td><%= measure.related_to_neeap_policy_boolean %></td>
+        <td><%= measure.total_ghg_emissions_reductions_in_2020 %></td>
+        <td><%= measure.total_ghg_emissions_reductions_in_2030 %></td>
+        <td><%= measure.truth_uuid %></td>
+        <td><%= link_to 'Show', measure %></td>
+        <td><%= link_to 'Edit', edit_measure_path(measure) %></td>
+        <td><%= link_to 'Destroy', measure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Measure', new_measure_path %>
