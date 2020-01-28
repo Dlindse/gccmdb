@@ -1,0 +1,167 @@
+<%= form_with(model: measure, local: true) do |form| %>
+  <% if measure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(measure.errors.count, "error") %> prohibited this measure from being saved:</h2>
+
+      <ul>
+        <% measure.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :agency %>
+    <%= form.text_field :agency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.text_field :country_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_region %>
+    <%= form.text_field :country_region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_source_id %>
+    <%= form.text_field :data_source_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghgs_affected %>
+    <%= form.text_field :ghgs_affected %>
+  </div>
+
+  <div class="field">
+    <%= form.label :impact_evaluation %>
+    <%= form.text_field :impact_evaluation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :impact_on_eu_ets_esd_or_lulucf_emissions %>
+    <%= form.text_field :impact_on_eu_ets_esd_or_lulucf_emissions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jurisdiction %>
+    <%= form.text_field :jurisdiction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :percent_private_funded %>
+    <%= form.text_field :percent_private_funded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_financing_period_start %>
+    <%= form.number_field :measure_financing_period_start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_financing_quantity %>
+    <%= form.text_field :measure_financing_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_implementation_period_start_year %>
+    <%= form.number_field :measure_implementation_period_start_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_implementation_period_end_year %>
+    <%= form.number_field :measure_implementation_period_end_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_status %>
+    <%= form.text_field :measure_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_targets %>
+    <%= form.text_field :measure_targets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_type %>
+    <%= form.text_field :measure_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_written_year %>
+    <%= form.number_field :measure_written_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_documents_text %>
+    <%= form.text_field :related_documents_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_documents_url %>
+    <%= form.text_field :related_documents_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_to_eu_policy %>
+    <%= form.text_field :related_to_eu_policy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_to_eu_policy_boolean %>
+    <%= form.check_box :related_to_eu_policy_boolean %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_to_neeap_policy %>
+    <%= form.text_field :related_to_neeap_policy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_to_neeap_policy_boolean %>
+    <%= form.text_field :related_to_neeap_policy_boolean %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_ghg_emissions_reductions_in_2020 %>
+    <%= form.text_field :total_ghg_emissions_reductions_in_2020 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_ghg_emissions_reductions_in_2030 %>
+    <%= form.text_field :total_ghg_emissions_reductions_in_2030 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :truth_uuid %>
+    <%= form.text_field :truth_uuid %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
