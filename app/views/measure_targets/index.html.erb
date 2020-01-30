@@ -1,29 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="index-container">
 
-<h1>Measure Targets</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Target</th>
-      <th>Truth uuid</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Measure Targets</h1>
 
-  <tbody>
-    <% @measure_targets.each do |measure_target| %>
+  <table class="border-table">
+    <thead>
       <tr>
-        <td><%= measure_target.target %></td>
-        <td><%= measure_target.truth_uuid %></td>
-        <td><%= link_to 'Show', measure_target %></td>
-        <td><%= link_to 'Edit', edit_measure_target_path(measure_target) %></td>
-        <td><%= link_to 'Destroy', measure_target, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Target</th>
+        <th>Associated Measures</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @measure_targets.sort_by{|measure_target| Measure.where('measure_targets && ARRAY[?]::varchar[]', measure_target.id).count }.reverse.each do |measure_target| %>
+        <tr>
+          <td><%= link_to measure_target.target, measure_target %></td>
+          <td><%= Measure.where('measure_targets && ARRAY[?]::varchar[]', measure_target.id).count %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Measure Target', new_measure_target_path %>
+  <br>
+
+</div>

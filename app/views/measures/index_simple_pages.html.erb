@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Measures</h1>
+<h4>
+  <%= paginate @measures %>
+</h4>
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :measure_name_cont %>
+  <%= f.search_field :name_cont %>
+
+  
+<% if false %>
+<% end %>
+  <br>
+  <%= f.label :name_or_description_or_measure_targets_cont %>
+  <%= f.search_field :name_or_description_or_measure_targets_cont %>
+  
+  <%= f.submit %>
+<% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Targets</th>
+        <th>Description</th>
+        <th>Implementation start year</th>
+        <th>Data source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @measures.each do |measure| %>
+        <tr>
+          <td><%= measure.name %></td>
+          <td>
+            <% @country = Country.where(id: measure.country_id)[0] %>
+            <%= link_to @country.country, @country %>
+          </td>  
+          <td>
+            <% measure.measure_targets.each_with_index{|target_id,i| %>
+              <% @target = MeasureTarget.where(id: target_id)[0] %>
+              <% if target_id == measure.measure_targets[-1] %>
+                <%= link_to @target.target, @target %>
+              <% else %>
+                <%= link_to @target.target, @target %>, 
+              <% end %>
+            <% } %>
+          </td>
+          <td><%= measure.description %></td>
+          <td align="center">
+            <%= measure.measure_implementation_period_start_year %>
+          </td>
+          <td>
+            <% @source = DataSource.where(id: measure.data_source_id)[0] %>
+            <%= link_to @source.source, @source %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<div class="container">
+</div>

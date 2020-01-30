@@ -1,29 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="index-container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Data Sources</h1>
+  <h1>Data Sources</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Source</th>
-      <th>Truth uuid</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @data_sources.each do |data_source| %>
+  <table class="border-table">
+    <thead>
       <tr>
-        <td><%= data_source.source %></td>
-        <td><%= data_source.truth_uuid %></td>
-        <td><%= link_to 'Show', data_source %></td>
-        <td><%= link_to 'Edit', edit_data_source_path(data_source) %></td>
-        <td><%= link_to 'Destroy', data_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Source</th>
+        <th>Associated Measures</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @data_sources.sort_by{|source| Measure.where(data_source_id: source.id).count }.reverse.each do |data_source| %>
+        <tr>
+          <td><%= link_to data_source.source, data_source %></td>
+          <td><%= Measure.where(data_source_id: data_source.id).count %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Data Source', new_data_source_path %>
+  <br>
+
+</div>
