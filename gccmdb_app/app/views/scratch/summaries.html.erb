@@ -47,13 +47,13 @@
 							<% if measure_group[0] == 2005 %>
 								<td style="text-align: center; vertical-align: top;">
 									<span style="text-decoration: underline;"><%= measure_group[0] %>*</span><br>
-									<span style="font-size: <%= measure_group[1].count * 0.19 %>px; vertical-align: center;"><%= measure_group[1].count %></span><br>
+									<span style="vertical-align: center;"><%= measure_group[1].count %></span><br>
 									<br> <strong>* <u>Kyoto Protocol</u></strong>
 								</td>
 							<% else %>
 								<td style="text-align: center; vertical-align: top;">
 									<span style="text-decoration: underline;"><%= measure_group[0] %></span><br>
-									<span style="font-size: <%= measure_group[1].count * 0.19 %>px; vertical-align: center;"><%= measure_group[1].count %></span>
+									<span style="vertical-align: center;"><%= measure_group[1].count %></span>
 								</td>
 							<% end %>
 
@@ -68,19 +68,19 @@
 		<td>
 			<h2 style="margin-top: 12px;">Measure Implementation Start Year Frequency</h2>
 			<table class="border-table" align="left">
-				<% Measure.all.group_by{|measure| measure.measure_implementation_period_start_year }.reject{|hsh| hsh == nil }.to_a.sort_by{|hsh| hsh[0] }.in_groups_of(8).each{|group_measure_group| %>
+				<% Measure.all.group_by{|measure| measure.measure_implementation_period_start_year }.reject{|hsh| hsh == nil }.to_a.sort_by{|hsh| hsh[0] }.in_groups_of(10).each{|group_measure_group| %>
 					<tr>
 						<% group_measure_group.reject{|a| a == nil }.each{|measure_group| %>
 							<% if measure_group[0] == 2005 %>
 								<td style="text-align: center; vertical-align: top;">
 									<span style="text-decoration: underline;"><%= measure_group[0] %>*</span><br>
-									<span style="font-size: <%= measure_group[1].count * 0.14 %>px; vertical-align: center;"><%= measure_group[1].count %></span><br>
+									<span style="vertical-align: center;"><%= measure_group[1].count %></span><br>
 									<br> <strong>* <u>Kyoto Protocol</u></strong>
 								</td>
 							<% else %>
 								<td style="text-align: center; vertical-align: top;">
 									<span style="text-decoration: underline;"><%= measure_group[0] %></span><br>
-									<span style="font-size: <%= measure_group[1].count * 0.14 %>px; vertical-align: center;"><%= measure_group[1].count %></span>
+									<span style="vertical-align: center;"><%= measure_group[1].count %></span>
 								</td>
 							<% end %>
 
@@ -95,18 +95,18 @@
 		<td>
 			<h2 style="margin-top: 12px;">Measure Implementation End Year Frequency</h2>
 			<table class="border-table" align="left">
-				<% Measure.all.group_by{|measure| measure.measure_implementation_period_end_year }.reject{|hsh| hsh == nil }.to_a.sort_by{|hsh| hsh[0] }.in_groups_of(28).each{|group_measure_group| %>
+				<% Measure.all.group_by{|measure| measure.measure_implementation_period_end_year }.reject{|hsh| hsh == nil }.to_a.sort_by{|hsh| hsh[0] }.in_groups_of(10).each{|group_measure_group| %>
 					<tr>
 						<% group_measure_group.each{|measure_group| %>
 							<td style="text-align: center; vertical-align: top;">
 								<% unless measure_group == nil %>
 									<% if measure_group[0] == 2005 %>
 										<span style="text-decoration: underline;"><%= measure_group[0] %>*</span><br>
-										<span style="font-size: <%= measure_group[1].count * 0.2 %>px; vertical-align: center;"><%= measure_group[1].count %></span><br>
+										<span style="vertical-align: center;"><%= measure_group[1].count %></span><br>
 										<br> <strong>* <u>Kyoto Protocol</u></strong>
 									<% else %>
 										<span style="text-decoration: underline;"><%= measure_group[0] %></span><br>
-										<span style="font-size: <%= measure_group[1].count * 0.2 %>px; vertical-align: center;"><%= measure_group[1].count %></span>
+										<span style="vertical-align: center;"><%= measure_group[1].count %></span>
 									<% end %>
 								<% end %>
 							</td>

@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Gccmdb
   class Application < Rails::Application
+    config.autoload_paths += %W(#{config.root}/app/font_scale)
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
