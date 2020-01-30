@@ -1,2 +1,0 @@
-class MeasureTarget < ApplicationRecord
-end
