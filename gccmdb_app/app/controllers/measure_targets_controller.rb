@@ -5,11 +5,19 @@ class MeasureTargetsController < ApplicationController
   # GET /measure_targets.json
   def index
     @measure_targets = MeasureTarget.all
+    @search = MeasureTarget.search(params[:q])
+    @measure_targets = @search.result.paginate(page: params[:page], per_page: 100)
+  end
+
+  def index_master
+    @measure_targets = MeasureTarget.all
   end
 
   # GET /measure_targets/1
   # GET /measure_targets/1.json
   def show
+    @search = Measure.where('measure_targets && ARRAY[?]::varchar[]', @measure_target.id).search(params[:q])
+    @target_measures = @search.result.paginate(page: params[:page], per_page: 100)
   end
 
   # GET /measure_targets/new

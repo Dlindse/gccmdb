@@ -5,6 +5,146 @@
 	padding: 22px;
 }
 
-table tr td { 
-	font-size: 10px; 
+.index-container{
+	h1 {
+		text-align: center;
+		margin-bottom: 22px;
+	}
+
+	table{
+		th{
+			padding: 6px;
+		}
+	}
 }
+
+.show-container{
+	h1 {
+		text-align: center;
+		margin-bottom: 22px;
+	}
+	h2 {
+		text-align: center;
+		margin-bottom: 22px;	
+	}
+}
+
+
+/* TABLE STYLES */
+.table-container{
+	max-width: 60%;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 22px;
+	border: solid 1px black;
+}
+
+
+table.border-table{
+	th{
+		border: solid 1px black;
+	}
+	td{
+		border: solid 1px black;
+		padding: 6px;
+	}
+}
+
+table {
+	margin: auto;
+
+	th {
+		padding: 0px 12px 0px 12px;
+	}
+	td.center{
+			text-align: center;
+		}
+}
+table tr td { 
+	font-size: 10px;
+}
+
+
+
+table.measures-index{
+	/* margin-top: -80px;
+
+	thead tr:nth-child(1) th{
+	    position: sticky;
+	    top: 88px;
+	    z-index: 1;
+  	} */
+	th{
+		padding:0px 12px 0px 12px;
+		background: white;
+
+	}
+	th.center {
+		text-align: center;
+	}
+
+	td {
+		padding-bottom: 12px;
+		vertical-align: top;
+	}
+
+	td.center {
+		text-align: center;
+	}
+}
+
+
+/* LINK STYLES */
+
+a.no-hover:hover {
+	text-decoration: none;
+}
+
+
+
+/* PAGINATION STYLES */
+
+.pagination{
+	margin: auto;
+	margin-top:12px;
+	margin-bottom:12px;
+
+	.previous_page{
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-sm;
+	}
+
+	.next_page{
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-sm;
+	}
+
+	a {
+		@extend .page-link;
+	}
+
+	em.current {
+		@extend .page-link;
+		background-color: $blue;
+		color: white;
+	}
+}
+
+
+
+
+/* SEARCHBAR STYLES */
+
+.nav-centered{
+	margin: auto;
+}
+
+.nav-link{
+	@extend h5;
+}
+
+
+

@@ -1,14 +1,6 @@
-class ScratchController < ApplicationController
-  def back
-  end
-  
-  def homepage
-  end
+class AboutController < ApplicationController
 
-  def one
-  end
-
-  def summaries
+  def home
     @models = []
     Dir.foreach("app/models") { |model_path|
       puts model_path
@@ -17,8 +9,8 @@ class ScratchController < ApplicationController
         @models << model_path.gsub(".rb","").gsub("_"," ").split(" ").map{|string| string.capitalize }.join("").pluralize
       end
     }
+  end
 
-
-    
+  def docs
   end
 end

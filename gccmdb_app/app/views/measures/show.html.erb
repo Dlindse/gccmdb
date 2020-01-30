@@ -1,6 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @measure.name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <% @country = Country.where(id: @measure.country_id)[0] %>
+  <%= link_to @country.country, @country %>
+</p>
+
+<p>
+  <strong>Data source:</strong>
+  <% @source = DataSource.where(id: @measure.data_source_id)[0] %>
+  <%= link_to @source.source, @source%>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= link_to @measure.link, @measure.link, target: "_blank" %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @measure.description %>
+</p>
+
+<p>
   <strong>Agency:</strong>
   <%= @measure.agency %>
 </p>
@@ -11,23 +38,8 @@
 </p>
 
 <p>
-  <strong>Country:</strong>
-  <%= @measure.country_id %>
-</p>
-
-<p>
   <strong>Country region:</strong>
   <%= @measure.country_region %>
-</p>
-
-<p>
-  <strong>Data source:</strong>
-  <%= @measure.data_source_id %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @measure.description %>
 </p>
 
 <p>
@@ -48,16 +60,6 @@
 <p>
   <strong>Jurisdiction:</strong>
   <%= @measure.jurisdiction %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @measure.link %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @measure.name %>
 </p>
 
 <p>
@@ -92,7 +94,14 @@
 
 <p>
   <strong>Measure targets:</strong>
-  <%= @measure.measure_targets %>
+  <% @measure.measure_targets.each_with_index{|target_id,i| %>
+    <% @target = MeasureTarget.where(id: target_id)[0] %>
+    <% if target_id == @measure.measure_targets[-1] %>
+      <%= link_to @target.target, @target %>
+    <% else %>
+      <%= link_to @target.target, @target %>, 
+    <% end %>
+  <% } %>
 </p>
 
 <p>
@@ -145,6 +154,9 @@
   <%= @measure.total_ghg_emissions_reductions_in_2030 %>
 </p>
 
+<% if false %>
+
+
 <p>
   <strong>Truth uuid:</strong>
   <%= @measure.truth_uuid %>
@@ -152,3 +164,5 @@
 
 <%= link_to 'Edit', edit_measure_path(@measure) %> |
 <%= link_to 'Back', measures_path %>
+
+<% end %>

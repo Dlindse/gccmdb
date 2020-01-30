@@ -1,14 +1,65 @@
-<p id="notice"><%= notice %></p>
+<div class="show-container">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @country.country %>
-</p>
+	<h1>
+		<p>
+		  <strong>Country:</strong>
+		  <%= @country.country %>
+		</p>
+	</h1>
 
-<p>
-  <strong>Truth uuid:</strong>
-  <%= @country.truth_uuid %>
-</p>
+	<h2>
+		<%= @country_measures.all.count %> measures associated with this country
+	</h2>
 
-<%= link_to 'Edit', edit_country_path(@country) %> |
-<%= link_to 'Back', countries_path %>
+	<div class="pagination">
+    	<%= will_paginate @country_measures %>
+	</div>
+
+	<table class="measures-index">
+	  <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th class="center"><%= sort_link(@search, :country_id) %></th>
+	      <th class="center">Targets</th>
+	      <th>Description</th>
+	      <th class="center"><%= sort_link(@search, :measure_implementation_period_start_year, "Implementation start year") %></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% @country_measures.each do |measure| %>
+	      <tr>
+	        <td width="10%"><%= link_to measure.name, measure %></td>
+	        <td class="center">
+	          <% @country = Country.where(id: measure.country_id)[0] %>
+	          <%= link_to @country.country, @country %>
+	        </td>  
+	        <td class="center">
+	          <% measure.measure_targets.each_with_index{|target_id,i| %>
+	            <% @target = MeasureTarget.where(id: target_id)[0] %>
+	            <% if target_id == measure.measure_targets[-1] %>
+	              <%= link_to @target.target, @target %>
+	            <% else %>
+	              <%= link_to @target.target, @target %>, 
+	            <% end %>
+	          <% } %>
+	        </td>
+	        <td width="70%"><%= measure.description %></td>
+	        <td class="center">
+	          <%= measure.measure_implementation_period_start_year %>
+	        </td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>	
+
+	<% if false %>
+	<p>
+	  <strong>Truth uuid:</strong>
+	  <%= @country.truth_uuid %>
+	</p>
+
+	<%= link_to 'Edit', edit_country_path(@country) %> |
+	<%= link_to 'Back', countries_path %>
+	<% end %>
+</div>
